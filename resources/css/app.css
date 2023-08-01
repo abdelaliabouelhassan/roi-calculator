@@ -11,8 +11,29 @@ html{
 .container {
     width: 100%;
 }
+@media (min-width: 475px) {
+    .container {
+        max-width:unset;
+    }
+}
+@media (min-width: 640px) {
+    .container {
+        max-width:unset;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width:unset;
+    }
+}
+
 
 @media (min-width: 1000px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1024px) {
     .container {
         max-width: 960px;
     }

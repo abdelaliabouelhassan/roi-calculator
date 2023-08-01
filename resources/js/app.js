@@ -16,7 +16,7 @@ import  accordion  from './plugins/accordion';
 
 const app = createApp({});
 
-import Header from './components/partials/header/Header.vue';
+import Header from './components/partials/Header.vue';
 import HomePage from './pages/HomePage.vue';
 // import Footer from './components/partials/Footer.vue';
 app.component('header-component', Header);

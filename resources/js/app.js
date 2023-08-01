@@ -6,6 +6,7 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import  accordion  from './plugins/accordion';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,8 +16,12 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+import Header from './components/partials/header/Header.vue';
+import HomePage from './pages/HomePage.vue';
+// import Footer from './components/partials/Footer.vue';
+app.component('header-component', Header);
+app.component('home-page', HomePage);
+app.directive('accordion', accordion);
 
 /**
  * The following block of code may be used to automatically register your

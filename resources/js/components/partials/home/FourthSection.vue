@@ -1,7 +1,7 @@
 <template>
     <section class="h-[504px] lg:h-[528px] flex items-center justify-center bg-gray-200 relative overflow-hidden">
         <div class="z-10 flex flex-col lg:items-center gap-y-6 w-full px-4 mx-auto max-w-[773px] lg:max-w-[531px] lg:px-16 lg:text-center xl:max-w-[666px]">
-            <h1 class="text-4xl font-bold w-full max-w-[328px] lg:max-w-none  xl:text-5xl">Struggling to find the right lead gen partner?</h1>
+            <h1 class="text-[2.25rem] font-bold w-full max-w-[328px] lg:max-w-none leading-[48px] xl:text-[3rem] xl:leading-[56px]">Struggling to find the right lead gen partner?</h1>
             <p class="w-full">Download our scorecard to assess the potential contractors and choose the best-fit for your business.</p>
             <button class="bg-purple-500 rounded-lg  text-white font-bold text-lg p-4 pl-6 flex items-center justify-between gap-x-6 lg:w-fit w-full hover:bg-purple-500/70">
                 <span>Get your free scorecard</span>

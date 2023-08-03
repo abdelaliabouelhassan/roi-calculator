@@ -1,15 +1,15 @@
 <template>
-    <section class="container mx-auto px-4 py-12 xl:max-w-[67.25rem] xl:px-0 xl:py-24 w-full">
-        <div class="w-full h-full flex flex-col gap-y-6">
-            <h1 class="text-[2rem] md:text-5xl md:text-center font-bold text-purple-500 leading-[44px] md:leading-[56px]">
+    <section class="flex flex-col gap-y-8 container mx-auto px-4 py-12 xl:max-w-[67.25rem] xl:px-0 xl:py-24 w-full lg:gap-y-20">
+        <div class="w-full h-full flex flex-col lg:items-center gap-y-6 lg:text-center">
+            <h1 class="text-[2rem] lg:text-5xl font-bold text-purple-500  md:leading-[56px]  xl:text-[60px]">
                 ROI Calculator
             </h1>
-            <div>
+            <div class="max-w-[640px] lg:text-lg">
                 How much income and ROI can you achieve with Prospecta? Use our calculator to see the real results we can drive for your business.
             </div>
         </div>
         <!-- Roi calculator -->
-        <div class="mt-6 rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center">
+        <div class="rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center">
             <!-- ranges -->
             <div class="w-full p-4 flex flex-col gap-y-6 lg:p-8">
                 <!-- Average # of monthly appointments -->

@@ -3,7 +3,7 @@
         <!-- testimonials slider -->
         <Splide :has-track="false"  :options="options" class="px-4 pt-12">
             <div class="container mx-auto flex items-center justify-between">
-                <h2 class="text-2xl lg:text-4xl xl:text-5xl font-bold">
+                <h2 class="text-[1.5rem] lg:text-[2.25rem] xl:text-[3rem] font-bold leading-8 lg:leading-[48px] xl:leading-[56px]">
                     <span>What our clients say</span><br>
                     <span>about our services</span>
                 </h2>

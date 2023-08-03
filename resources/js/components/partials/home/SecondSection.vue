@@ -1,5 +1,6 @@
 <template>
-    <section class="flex flex-col items-center gap-y-6 container mx-auto xl:max-w-[67.25rem] px-4 lg:flex-row lg:justify-between lg:gap-x-24 ">
+    <section class="flex flex-col items-center gap-y-6 container mx-auto xl:max-w-[67.25rem] px-4 py-12 lg:pt-16 lg:pb-12 lg:flex-row lg:justify-between lg:gap-x-24 
+                    xl:pt-20 xl:pb-16">
         
         <div class="flex flex-col gap-y-6 w-full ">
             <h1 class="text-2xl font-bold lg:text-[2rem]">How it works</h1>

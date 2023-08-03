@@ -1,7 +1,7 @@
 <template>
     <section class="overflow-hidden ">
         <!-- testimonials slider -->
-        <Splide :has-track="false"  :options="pptions" class="px-4 pt-12">
+        <Splide :has-track="false"  :options="options" class="px-4 pt-12">
             <div class="container mx-auto flex items-center justify-between">
                 <h2 class="text-2xl lg:text-4xl xl:text-5xl font-bold">
                     <span>What our clients say</span><br>
@@ -37,7 +37,7 @@
                                     CEO at Omnicharge
                                 </template>
                                 <template #testimony>
-                                    The work of the Belkins team was very productive. We were especially impressed by the deep research - it seemed that Belkins experts started speaking our brand’s language after delving into our style guidelines and investigating them for a while.
+                                    The work of the Prospecta team was very productive. We were especially impressed by the deep research - it seemed that Prospecta experts started speaking our brand’s language after delving into our style guidelines and investigating them for a while.
                                 </template>
                             </TestimonialCard>
                         </li>
@@ -53,7 +53,7 @@
                                     Senior Product Marketing Manager at Cengage Group
                                 </template>
                                 <template #testimony>
-                                    Belkins proved their expertise by exceeding expectations and target goals while increasing brand awareness. The Belkins team scheduled calls with 10,000+ employee size organizations, which brought us a lot of great conversations that are actively moving forward.
+                                    Prospecta proved their expertise by exceeding expectations and target goals while increasing brand awareness. The Prospecta team scheduled calls with 10,000+ employee size organizations, which brought us a lot of great conversations that are actively moving forward.
                                 </template>
                             </TestimonialCard>
                         </li>
@@ -69,7 +69,7 @@
                                     Global Campaigns Manager at OutSystems
                                 </template>
                                 <template #testimony>
-                                    The results exceeded our expectations. Belkins went above and beyond to adapt to our processes, ensuring a smooth workflow. Their team has been doing its best - it delivered more than 20 appointments in a month and a half.
+                                    The results exceeded our expectations. Prospecta went above and beyond to adapt to our processes, ensuring a smooth workflow. Their team has been doing its best - it delivered more than 20 appointments in a month and a half.
                                 </template>
                             </TestimonialCard>
                         </li>
@@ -85,7 +85,7 @@
                                     Co-Founder & Principal at Mole Street
                                 </template>
                                 <template #testimony>
-                                    They’ve been consistently booking 5–7 sales-qualified appointments for us every month. We just closed one of our largest contracts based on their lead research yesterday. They are the real deal. I can’t say enough good things about Belkins.
+                                    They’ve been consistently booking 5–7 sales-qualified appointments for us every month. We just closed one of our largest contracts based on their lead research yesterday. They are the real deal. I can’t say enough good things about Prospecta.
                                 </template>
                             </TestimonialCard>
                         </li>
@@ -101,7 +101,7 @@
                                     Head of Finance and Operations at EBCO Trends
                                 </template>
                                 <template #testimony>
-                                    Belkins superpower is how effectively their experts use software to get the actionable data. They don’t act intuitively but stay data-driven and consistent. They know what they need to do and when.
+                                    Prospecta superpower is how effectively their experts use software to get the actionable data. They don’t act intuitively but stay data-driven and consistent. They know what they need to do and when.
                                 </template>
                             </TestimonialCard>
                         </li>
@@ -143,8 +143,8 @@ export default {
     },
     data() {
       return{
-        pptions:{
-            rewind:true,
+        options:{
+            rewind:false,
             perMove: 1,
             arrows:true,
             pagination: false,
@@ -156,7 +156,7 @@ export default {
 
             breakpoints: {
                 1280: {
-                    rewind:true,
+                    rewind:false,
                     perMove: 1,
                     arrows:true,
                     pagination: false,
@@ -254,6 +254,21 @@ export default {
     .splide__slide{
         width: 544px !important;
     }
+}
+
+.splide__track::-webkit-scrollbar {
+    background-color: transparent;
+    height: 6px;
+}
+
+.splide__track::-webkit-scrollbar-thumb {
+    background-color: #0000001a;
+    border-radius: 100px;
+}
+
+.splide__track::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    border-radius: 100px;
 }
 </style>
 

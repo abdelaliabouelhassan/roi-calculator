@@ -54,13 +54,13 @@ export default {
     border: none;
     border-radius: 3px 3px 0 0;
     outline: none;
-    color: rgb(168 85 247);
+    height: 3.5px;
 
 }
 .range-input::-webkit-slider-runnable-track {
-    height: 3.5px;
+    /* height: 3.5px; */
     -webkit-appearance: none;
-    margin-top: -1px;
+    /* margin-top: -1px; */
 
 }
     
@@ -71,9 +71,36 @@ export default {
     cursor: pointer;
     border-radius: 50px;
     background: rgb(168 85 247);
-    margin-top: -5px;
 }
 .range-input::-webkit-slider-thumb:active {
     outline: rgba(169, 85, 247, 0.3) 3px solid;
 }
+
+
+
+/** FF*/
+.range-input::-moz-range-progress {
+    -webkit-appearance: none;
+    background-color: rgb(168 85 247);
+    height: 3.5px; 
+}
+.range-input::-moz-range-track {  
+    height: 3.5px;
+    -webkit-appearance: none;
+    margin-top: -1px;
+    background-color: rgb(235, 235, 235);
+}
+.range-input::-moz-range-thumb {
+    width: 14px;
+    -webkit-appearance: none;
+    height: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(168 85 247);
+    margin-top: -5px;
+}
+.range-input::-moz-range-thumb:active {
+    outline: rgba(169, 85, 247, 0.3) 3px solid;
+}
+
 </style>

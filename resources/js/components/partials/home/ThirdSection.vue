@@ -1,9 +1,10 @@
 <template>
-    <section class="flex flex-col items-center gap-y-6 container mx-auto xl:max-w-[67.25rem] px-4 lg:flex-row lg:justify-between lg:gap-x-24 ">
+    <section class="flex flex-col items-center gap-y-6 container mx-auto xl:max-w-[67.25rem] px-4 py-12 lg:pt-12 lg:pb-32 lg:flex-row lg:justify-between lg:gap-x-24 
+            xl:pt-16 xl:pb-40">
         
         <div class="flex flex-col gap-y-6 w-full ">
             <h1 class="text-2xl font-bold lg:text-[2rem]">Timeline of appointment setting results</h1>
-            <p class="lg:text-lg">One of the most common questions our clients ask is how quickly they can expect the results from their outbound efforts. Check out the video, where our sales expert explains how the duration of your campaign can impact your ROI. We break down the differences between running campaigns for 3, 6, and 12 months with Belkins.</p>
+            <p class="lg:text-lg">One of the most common questions our clients ask is how quickly they can expect the results from their outbound efforts. Check out the video, where our sales expert explains how the duration of your campaign can impact your ROI. We break down the differences between running campaigns for 3, 6, and 12 months with Prospecta.</p>
         </div>
 
         <div class="z-10 relative   w-full max-w-[496px] h-[320px] ">

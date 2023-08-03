@@ -1,5 +1,5 @@
 <template>
-    <section class="py-12 flex flex-col gap-y-6 lg:pb-32 xl:pb-40">
+    <section class="py-12 flex flex-col gap-y-6 lg:pb-32 lg:pt-6 xl:pb-40">
         <!-- brand slide 1 -->
         <Splide ref="slide1" :options="options1" :extensions="extensions" class="px-4 lg:hidden">
             <SplideSlide class="min-w-full lg:min-w-fit lg:w-fit flex items-center">
@@ -48,30 +48,7 @@
                     <img class="w-full h-full object-contain" src="assets/images/home/brands/cemtrex.svg" alt="" srcset="">
                 </div>
             </SplideSlide>
-            <!-- slide 2 brands -->
-            <SplideSlide class="min-w-full lg:min-w-fit lg:w-fit flex items-center">
-                <!--  bornbred -->
-                <div class="w-32 h-16 scale-[0.8] mx-4 brand-filter">
-                    <img class="w-full h-full object-contain" src="assets/images/home/brands/bornbred.svg" alt="" srcset="">
-                </div>
-                <!-- citrusad -->
-                <div class="w-32 h-16 scale-[0.8] mx-4 brand-filter">
-                    <img class="w-full h-full object-contain" src="assets/images/home/brands/citrusad.svg" alt="" srcset="">
-                </div>
-                <!-- berkeley -->
-                <div class="w-32 h-16 scale-[0.8] mx-4 brand-filter">
-                    <img class="w-full h-full object-contain" src="assets/images/home/brands/berkeley.png" alt="" srcset="">
-                </div>
-                <!-- mole-street -->
-                <div class="w-32 h-16 scale-[0.8] mx-4 brand-filter">
-                    <img class="w-full h-full object-contain" src="assets/images/home/brands/mole-street.svg" alt="" srcset="">
-                </div>
-                <!-- digital-knights -->
-                <div class="w-32 h-16 scale-[0.8] mx-4 brand-filter">
-                    <img class="w-full h-full object-contain" src="assets/images/home/brands/digital-knights.svg" alt="" srcset="">
-                </div>
-                
-            </SplideSlide>
+            
         </Splide>
         <!-- brand slide 2-->
         <Splide ref="slide2" :options="options2" :extensions="extensions" class="px-4 lg:hidden">

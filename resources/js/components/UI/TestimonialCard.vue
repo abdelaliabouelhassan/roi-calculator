@@ -1,6 +1,6 @@
 <template>
-    <div class="testimonial-card relative flex">
-        <svg class="absolute -top-[40px] right-6 z-0" width="180" height="104" viewBox="0 0 180 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="testimonial-card relative flex transition-opacity duration-200 ease-in-out">
+        <svg class="absolute -top-[40px] right-6 z-0 quotes-img opacity-100 transition-opacity duration-600 ease-in-out " width="180" height="104" viewBox="0 0 180 104" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M139.056 104C116.441 104 98.1064 86.3681 98.1064 64.6137C98.1064 33.7394 120.156 16.1259 144.174 0.534478C146.904 -1.23424 150.294 1.72284 148.723 4.50949C144.955 11.2113 142.364 18.1065 141.727 25.3104C163.097 26.6369 180 43.7253 180 64.6137C180 86.3681 161.666 104 139.056 104Z"
                 fill="#FF7426"/>
@@ -20,7 +20,8 @@
                 </linearGradient>
             </defs>
         </svg>
-        <div class="h-full flex flex-col gap-y-5 z-10 p-8 backdrop-blur-md rounded-2xl border border-white bg-white bg-opacity-60 ">
+        <div class="content-wrapper h-full flex flex-col gap-y-5 z-10 p-8  rounded-2xl border backdrop-blur-md bg-opacity-60 border-white bg-white
+                    ">
             <div class="flex items-center gap-x-4">
                 <!-- img -->
                 <div class="max-w-[80px] max-h-[80px]">
@@ -63,3 +64,24 @@
         </div>
     </div>
 </template>
+<style scoped>
+@media (min-width: 1000px) {
+    li .testimonial-card{
+        @apply opacity-40;
+    }
+    li .testimonial-card .quotes-img{
+        @apply opacity-0;
+    }
+    li.is-active  .testimonial-card, li.is-active  .testimonial-card .quotes-img{
+        @apply opacity-100;
+    }
+
+    li .testimonial-card .content-wrapper{
+        @apply backdrop-blur-0  bg-opacity-100 transition-all duration-700;
+    }
+    li.is-active .testimonial-card .content-wrapper{
+        @apply backdrop-blur-md  bg-opacity-60;
+    }
+}
+
+</style>

@@ -68,3 +68,22 @@ html{
 .accordion .chevron {
   transition: all 0.2s ease;
 }
+
+
+@keyframes levitation-1 {
+    0% {
+        transform: translate(0);
+    }
+    19% {
+        transform: translate(20px,20px) scale(.86);
+    }
+    50% {
+        transform: translate(1px,2px);
+    }
+    69% {
+        transform: translate(25px,25px) scale(.91);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

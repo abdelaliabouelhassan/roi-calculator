@@ -8,7 +8,7 @@
 
         <div class="z-10 relative rounded-2xl border border-white flex flex-col w-full max-w-[496px]">
             <!-- ball -->
-            <div class="purple-ball z-0 absolute -top-[40px] right-[56px] w-14 h-14 lg:w-20 lg:h-20 bg-bright-purple-gradient .shadow-bullet-purple rounded-full">
+            <div class="animate-[levitation-1_30s_infinite] z-0 absolute -top-[40px] right-[56px] w-14 h-14 lg:w-20 lg:h-20 bg-bright-purple-gradient .shadow-bullet-purple rounded-full">
             </div>
             <div class="z-10 h-full rounded-t-2xl overflow-hidden  flex flex-col items-center justify-between gap-y-2 text-purple-500 py-8 px-16 bg-white bg-opacity-70 backdrop-blur-md">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,26 +63,7 @@
 }
 
 
-.purple-ball{
-    animation: levitation-1 30s infinite;
-}
-@keyframes levitation-1 {
-    0% {
-        transform: translate(0);
-    }
-    19% {
-        transform: translate(20px,20px) scale(.86);
-    }
-    50% {
-        transform: translate(1px,2px);
-    }
-    69% {
-        transform: translate(25px,25px) scale(.91);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
+
 
 
 .roi-calculator-formula {

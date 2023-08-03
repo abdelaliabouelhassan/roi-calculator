@@ -3,11 +3,12 @@
 
 ## Project Setup locally
 
-
+- create a .env file and copy every thing in .env.example inside the .env file 
 - open terminal
 - run `composer install`
 - run `npm install`
 - run `npm run dev`
+- run `php artisan key:generate`
 - run `php artisan server`
 
 

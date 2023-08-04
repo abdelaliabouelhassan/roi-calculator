@@ -77,7 +77,7 @@
                     </div>
                     <div class="flex flex-col gap-y-1 py-5" >
                         <span class="text-sm text-gray-800">Return on investment</span>
-                        <span class="text-[2rem] lg:text-5xl font-bold text-purple-500"> {{returnOnInvestment.toFixed(0)}}%</span>
+                        <span class="text-[2rem] lg:text-5xl font-bold text-purple-500"> {{returnOnInvestment < 0 ? 0 :returnOnInvestment.toFixed(0)}}%</span>
                     </div>
                 </div>
                 <a href="https://calendly.com/joeywalsh/30min" class="bg-purple-500 text-white py-4 px-6 text-lg w-full flex items-center justify-center  font-semibold rounded-lg

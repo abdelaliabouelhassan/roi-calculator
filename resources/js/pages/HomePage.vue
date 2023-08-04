@@ -2,11 +2,11 @@
     <div class="bg-gray-100">
         <FirstSection />
         <SecondSection />
-        <ThirdSection />
+        <!-- <ThirdSection />
         <FourthSection />
         <FifthSection />
-        <SixthSection />
-        <SeventhSection />
+        <SixthSection />-->
+        <SeventhSection /> 
         <!-- <p class="">This is my HOME PAGE component content.</p> -->
     </div>
 </template>

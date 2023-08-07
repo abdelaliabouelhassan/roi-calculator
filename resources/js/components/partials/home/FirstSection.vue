@@ -17,7 +17,8 @@
                     <div class="text-[#666666]">
                         Average # of monthly appointments
                     </div> 
-                    <div>{{averageMonthlyAppointments}}</div>
+                    <input class="range-number-input focus:outline-none" type="number" min="1" max="100" 
+                      :value="averageMonthlyAppointments" @input="onAverageMonthlyAppointmentsInput" ref="averageMonthlyAppointmentsInput">
                     <RangeInput class="absolute w-[calc(100%-2rem)]  bottom-0" :min="1" :max="100" :step="1" v-model="averageMonthlyAppointments"/>
                 </div>
                 <!-- Close ratio (after appointment)  -->
@@ -39,7 +40,9 @@
                         </div>
                         
                     </div> 
-                    <div>{{closeRatio}}</div>
+
+                    <input class="range-number-input focus:outline-none" type="number" min="1" max="100" 
+                     :value="closeRatio" @input="onCloseRatioInput" ref="closeRatioInput" >
                     <RangeInput class="absolute w-[calc(100%-2rem)]  bottom-0" :min="1" :max="100" :step="1" v-model="closeRatio"/>
                 </div>
                 <!-- Annual contract value (ACV)  -->
@@ -61,7 +64,8 @@
                         </div>
                         
                     </div> 
-                    <div>{{formatNumber(annualContractValue)}}</div>
+                    <input class="focus:outline-none" :value="formatNumber(annualContractValue)" type="text" pattern="^[0-9,]*$"
+                             @input="onAnnualContractInput" ref="annualContractInput">
                     <RangeInput class="absolute w-[calc(100%-2rem)]  bottom-0" :min="25000" :max="5000000" :step="1" v-model="annualContractValue"/>
                 </div>
             </div>
@@ -99,7 +103,8 @@ export default {
         return {
             averageMonthlyAppointments:1,
             closeRatio:1,
-            annualContractValue:25000
+            annualContractValue:25000,
+            temp:null,
         }
     },
     computed:{
@@ -117,7 +122,77 @@ export default {
     methods:{
         formatNumber(number) {
             return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        },
+
+        onAverageMonthlyAppointmentsInput(event){
+            this.temp = Number( event.target.value) 
+            this.$refs.averageMonthlyAppointmentsInput.addEventListener("focusout", this.onAverageMonthlyAppointmentsFosucOut);
+        },
+        onAverageMonthlyAppointmentsFosucOut(){
+            this.averageMonthlyAppointments = this.temp
+            this.temp = null
+            this.$refs.averageMonthlyAppointmentsInput.removeEventListener("focusout", this.onAverageMonthlyAppointmentsFosucOut);
+        },
+
+
+        onCloseRatioInput(event){
+            this.temp = Number( event.target.value) 
+            this.$refs.closeRatioInput.addEventListener("focusout", this.onCloseRatioFosucOut);
+        },
+        onCloseRatioFosucOut(){
+            this.closeRatio = this.temp
+            this.temp = null
+            this.$refs.closeRatioInput.removeEventListener("focusout", this.onCloseRatioFosucOut);
+        },
+
+
+        onAnnualContractInput(event){
+            //remove anything other than numbers and comma
+            event.target.value = event.target.value.replace(/[^0-9,]/g, '')
+
+            this.temp = Number( event.target.value.replace(/[,']/g,'')) 
+            this.$refs.annualContractInput.addEventListener("focusout", this.onAnnualContractFocusOut);
+        },
+        onAnnualContractFocusOut(event){
+            this.annualContractValue = this.temp
+            this.temp = null
+            this.$refs.annualContractInput.removeEventListener("focusout", this.onAnnualContractFocusOut);
         }
+    },
+    watch:{
+        averageMonthlyAppointments(val){
+            if(val>100){this.averageMonthlyAppointments = 100}
+            if(val<0){this.averageMonthlyAppointments = 1}
+            if(!val){this.averageMonthlyAppointments = 1}
+        },
+        closeRatio(val){
+            if(val>100){this.closeRatio = 100}
+            if(val<0){this.closeRatio = 1}
+            if(!val){this.closeRatio = 1}
+        },
+        annualContractValue(val){
+            if(val>5000000){this.annualContractValue = 5000000}
+            if(val<=25000){this.annualContractValue = 25000}
+            if(!val){this.annualContractValue = 25000}
+        }
+    },
+    unmounted() {
+        this.$refs.averageMonthlyAppointmentsInput.removeEventListener("focusout", this.onAverageMonthlyAppointmentsFosucOut);
+        this.$refs.closeRatioInput.removeEventListener("focusout", this.onCloseRatioFosucOut);
+        this.$refs.annualContractInput.removeEventListener("focusout", this.onAnnualContractFocusOut);
     }
 }
 </script>
+
+<style scoped>
+.range-number-input{
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+.range-number-input::-webkit-inner-spin-button,
+.range-number-input::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+</style>

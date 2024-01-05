@@ -1,15 +1,15 @@
 <template>
-    <section class="flex flex-col gap-y-8 container mx-auto px-4 py-12 xl:max-w-[67.25rem] xl:px-0 xl:py-24 w-full lg:gap-y-20">
+    <section class="flex flex-col    px-4 py-12 m-auto max-w-[67.25rem] space-y-10   w-full ">
         <div class="w-full h-full flex flex-col lg:items-center gap-y-6 lg:text-center">
             <h1 class="text-[2rem] lg:text-5xl font-bold text-purple-500  md:leading-[56px]  xl:text-[60px]">
                 ROI Calculator
             </h1>
             <div class="max-w-[640px] lg:text-lg">
-                How much income and ROI can you achieve with Prospecta? Use our calculator to see the real results we can drive for your business.
+               Estimate the growth you can achieve with Prospecta
             </div>
         </div>
         <!-- Roi calculator -->
-        <div class="rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center">
+        <div class="rounded-2xl bg-white flex flex-col lg:flex-row lg:items-start">
             <!-- ranges -->
             <div class="w-full p-4 flex flex-col gap-y-6 lg:p-8">
                 <!-- Average # of monthly appointments -->
@@ -49,7 +49,7 @@
                 <div class="py-3 px-4 relative border rounded-xl flex flex-col gap-y-1 text-sm">
                     <div class="text-[#666666] flex items-center gap-x-2">
                         <span>
-                            Annual contract value (ACV), £
+                            Annual contract value (ACV), €
                         </span>
                         <!-- info -->
                         <div class="relative group">
@@ -73,21 +73,21 @@
                 <div class="flex flex-col divide-y">
                     <div class="flex flex-col gap-y-1 pb-5" >
                         <span class="text-sm text-gray-800">Sales per Year</span>
-                        <span class="text-2xl lg:text-[2rem] font-bold"> £{{formatNumber(salesPerYear)}}</span>
+                        <span class="text-2xl lg:text-[2rem] font-bold"> €{{formatNumber(salesPerYear)}}</span>
                     </div>
                     <div class="flex flex-col gap-y-1 py-5" >
                         <span class="text-sm text-gray-800">Investments per Year</span>
-                        <span class="text-2xl lg:text-[2rem] font-bold"> £{{formatNumber(investmentPerYear)}}</span>
+                        <span class="text-2xl lg:text-[2rem] font-bold"> €{{formatNumber(investmentPerYear)}}</span>
                     </div>
                     <div class="flex flex-col gap-y-1 py-5" >
                         <span class="text-sm text-gray-800">Return on investment</span>
                         <span class="text-[2rem] lg:text-5xl font-bold text-purple-500"> {{returnOnInvestment < 0 ? 0 :returnOnInvestment.toFixed(0)}}%</span>
                     </div>
                 </div>
-                <a href="https://calendly.com/joeywalsh/30min" class="bg-purple-500 text-white py-4 px-6 text-lg w-full flex items-center justify-center  font-semibold rounded-lg
+                <!-- <a href="https://calendly.com/joeywalsh/30min" class="bg-purple-500 text-white py-4 px-6 text-lg w-full flex items-center justify-center  font-semibold rounded-lg
                  hover:bg-purple-500/70">
                     Discuss Pricing
-                </a>
+                </a> -->
             </div>
         </div>
         
@@ -113,7 +113,7 @@ export default {
             return (this.averageMonthlyAppointments * 12) * this.annualContractValue * this.closeRatio/100  ;
         },
         investmentPerYear(){
-            return (this.averageMonthlyAppointments * 12) * 520;
+            return (this.averageMonthlyAppointments * 12) * 600;
         },
         returnOnInvestment(){
             return (this.salesPerYear - this.investmentPerYear)*100 / this.investmentPerYear;

@@ -17,12 +17,12 @@ import  accordion  from './plugins/accordion';
 const app = createApp({});
 
 import VueSplide from '@splidejs/vue-splide';
-import Header from './components/partials/Header.vue';
+// import Header from './components/partials/Header.vue';
 import HomePage from './pages/HomePage.vue';
 
 app.use( VueSplide );
 // import Footer from './components/partials/Footer.vue';
-app.component('header-component', Header);
+// app.component('header-component', Header);
 app.component('home-page', HomePage);
 app.directive('accordion', accordion);
 

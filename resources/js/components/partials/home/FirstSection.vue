@@ -5,7 +5,7 @@
                 ROI Calculator
             </h1>
             <div class="max-w-[640px] lg:text-lg">
-               Estimate the growth you can achieve with Prospecta
+               Estimate the growth you can achieve with Prospecta.
             </div>
         </div>
         <!-- Roi calculator -->
